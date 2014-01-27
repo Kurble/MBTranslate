@@ -140,6 +140,7 @@ public class MBTranslate extends MBServerPlugin implements Listener, CommandExec
 		
 		translated.put("off", 
 				event.getPlayer().getDisplayName() + ": " + event.getMessage());
+		event.getServer().getLogger().info(translated.get("off"));
 		
 		for (Player player: getServer().getPlayers()) {
 			if (languages.languages.containsKey(player.getDisplayName())) {
